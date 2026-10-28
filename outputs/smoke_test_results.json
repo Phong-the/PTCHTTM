@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "tests": 3,
+  "predictions": [
+    {
+      "profile": "Học tập tốt",
+      "prediction": "Tốt"
+    },
+    {
+      "profile": "Cần hỗ trợ",
+      "prediction": "Cần hỗ trợ"
+    },
+    {
+      "profile": "Trung bình",
+      "prediction": "Đạt yêu cầu"
+    }
+  ]
+}
