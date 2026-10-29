@@ -10,11 +10,6 @@ FEATURES = [
     "attendance_pct", "weekly_study_hours", "assignment_completion_pct",
     "quiz_average", "midterm_score", "engagement_level"
 ]
-LABEL_VI = {
-    "Cần hỗ trợ": "Cần hỗ trợ",
-    "Đạt yêu cầu": "Đạt yêu cầu",
-    "Tốt": "Tốt",
-}
 
 st.set_page_config(page_title="AI Adaptive Learning | PTIT", page_icon="🎓", layout="wide")
 st.title("🎓 Hệ thống gợi ý lộ trình học tập")

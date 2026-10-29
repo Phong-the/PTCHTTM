@@ -1,15 +1,14 @@
 # AI-Powered Adaptive Learning & Student Performance Prediction
 
 **Môn học:** Phát triển các hệ thống thông minh — PTIT  
-**Thành viên:** Hồ Hiểu Thanh, Lê Nhật Linh, La Thế Phong  
-**Mã sinh viên / nhóm trưởng / nhóm phó:** để trống để nhóm tự bổ sung.
+**Thành viên:** Hồ Hiểu Thanh, Lê Nhật Linh, La Thế Phong
 
 ## Thành phần dự án
 - `app.py`: ứng dụng Streamlit, dự đoán mức học tập và gợi ý lộ trình theo quy tắc.
-- `train_model.py`: tạo dữ liệu mô phỏng, huấn luyện và so sánh Logistic Regression, Decision Tree, Random Forest.
+- `train_model.py`: tạo dữ liệu mô phỏng, huấn luyện và so sánh Logistic Regression, Decision Tree, Random Forest; xuất toàn bộ kết quả đánh giá.
 - `student_learning_data_synthetic.csv`: 1.200 bản ghi mô phỏng.
 - `models/performance_classifier.joblib`: pipeline mô hình đã huấn luyện.
-- `outputs/`: metrics, dự đoán tập test, bảng so sánh và biểu đồ.
+- `outputs/`: metrics, dự đoán tập test, bảng so sánh, biểu đồ và kết quả smoke test.
 - `tests/test_model.py`: kiểm thử khói mô hình.
 - `docs/DATA_DICTIONARY.md`: từ điển dữ liệu.
 - `docs/SYSTEM_DESIGN.md`: kiến trúc logic và các thành phần.
@@ -17,7 +16,7 @@
 - Ba file kế hoạch/báo cáo/WBS theo mẫu môn học.
 
 ## Cài đặt và chạy trên Windows
-Mở CMD/PowerShell trong thư mục dự án:
+Yêu cầu Python 3.13 (đã kiểm thử). Mở CMD/PowerShell trong thư mục dự án:
 
 ```powershell
 py -m venv .venv
@@ -33,6 +32,14 @@ streamlit run app.py
 python train_model.py
 python -m unittest discover -s tests -v
 ```
+
+`train_model.py` sinh lại CSV, model, toàn bộ bảng/biểu đồ trong `outputs/` và
+`outputs/smoke_test_results.json`. Mọi bước đều dùng `random_state=42`.
+
+## Tái lập kết quả
+Các thư viện được pin trong `requirements.txt`, trong đó `scikit-learn==1.8.0`
+là phiên bản đã tạo ra model và các chỉ số đã ghi nhận. Chạy lại trên môi trường
+khác phiên bản có thể cho kết quả Random Forest khác.
 
 ## Kết quả mô hình lần chạy đã ghi nhận
 - Số bản ghi: 1.200.
