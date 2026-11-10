@@ -54,7 +54,7 @@ with tab_predict:
         quiz = right.slider("Điểm quiz trung bình (0–100)", 0, 100, 65)
         midterm = left.slider("Điểm giữa kỳ (0–100)", 0, 100, 65)
         engagement = right.slider("Mức độ tham gia (1–5)", 1.0, 5.0, 3.0, 0.5)
-        submitted = st.form_submit_button("Phân loại và tạo lộ trình", type="primary", use_container_width=True)
+        submitted = st.form_submit_button("Phân loại và tạo lộ trình", type="primary", width="stretch")
 
     if submitted:
         sample = pd.DataFrame([{
@@ -82,7 +82,10 @@ with tab_predict:
         with c2:
             if probabilities is not None:
                 prob_df = pd.DataFrame({"Mức trình độ": classes, "Xác suất mô hình": probabilities})
-                st.bar_chart(prob_df.set_index("Mức trình độ"))
+                st.bar_chart(
+                    prob_df.set_index("Mức trình độ"),
+                    alt="Xác suất mô hình cho ba mức trình độ",
+                )
                 st.caption("Xác suất là đầu ra của mô hình trên dữ liệu mô phỏng, không phải xác suất thành công học tập đã được hiệu chuẩn.")
 
         recommendations = []
@@ -119,14 +122,17 @@ with tab_data:
     if DATA_PATH.exists():
         df = pd.read_csv(DATA_PATH)
         st.write(f"Số bản ghi: **{len(df):,}** · Số thuộc tính đầu vào: **{len(FEATURES)}**")
-        st.dataframe(df.head(20), use_container_width=True)
+        st.dataframe(df.head(20), width="stretch")
         st.markdown("**Phân bố nhãn mục tiêu**")
-        st.bar_chart(df["performance_level"].value_counts().rename_axis("Mức trình độ"))
+        st.bar_chart(
+            df["performance_level"].value_counts().rename_axis("Mức trình độ"),
+            alt="Phân bố nhãn mục tiêu trong bộ dữ liệu mô phỏng",
+        )
         st.markdown("**Thống kê mô tả**")
-        st.dataframe(df[FEATURES].describe().T, use_container_width=True)
+        st.dataframe(df[FEATURES].describe().T, width="stretch")
         missing = df[FEATURES].isna().sum().rename("Số giá trị thiếu").to_frame()
         st.markdown("**Giá trị thiếu theo thuộc tính**")
-        st.dataframe(missing, use_container_width=True)
+        st.dataframe(missing, width="stretch")
     else:
         st.info("Không tìm thấy tệp CSV trong thư mục dự án.")
 
