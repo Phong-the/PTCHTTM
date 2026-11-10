@@ -13,7 +13,7 @@
 - `docs/DATA_DICTIONARY.md`: từ điển dữ liệu.
 - `docs/SYSTEM_DESIGN.md`: kiến trúc logic và các thành phần.
 - `MODEL_CARD.md`: phạm vi sử dụng và giới hạn mô hình.
-- Ba file kế hoạch/báo cáo/WBS theo mẫu môn học.
+- Bốn file nộp kèm: `Project_Final_Report_Adaptive_Learning.docx`, `Project_Action_Plan_Adaptive_Learning.docx`, `Project_WBS_AI_Adaptive_Learning.xlsx`, `Project_Presentation_Adaptive_Learning.pptx`.
 
 ## Cài đặt và chạy trên Windows
 Yêu cầu Python 3.13 (đã kiểm thử). Mở CMD/PowerShell trong thư mục dự án:
