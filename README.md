@@ -5,6 +5,7 @@
 
 ## Thành phần dự án
 - `app.py`: ứng dụng Streamlit, dự đoán mức học tập và gợi ý lộ trình theo quy tắc.
+- `.streamlit/config.toml`: cấu hình giao diện và màu sắc thương hiệu cho ứng dụng.
 - `train_model.py`: tạo dữ liệu mô phỏng, huấn luyện và so sánh Logistic Regression, Decision Tree, Random Forest; xuất toàn bộ kết quả đánh giá.
 - `student_learning_data_synthetic.csv`: 1.200 bản ghi mô phỏng.
 - `models/performance_classifier.joblib`: pipeline mô hình đã huấn luyện.

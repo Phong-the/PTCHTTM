@@ -1,0 +1,40 @@
+[theme]
+base = "light"
+primaryColor = "#1F6FB2"
+backgroundColor = "#F5F8FC"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1E2A36"
+linkColor = "#1F6FB2"
+borderColor = "#D8E2EC"
+codeBackgroundColor = "#EEF3F8"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+baseFontSize = 15
+baseFontWeight = 400
+baseRadius = "0.65rem"
+buttonRadius = "0.65rem"
+showWidgetBorder = true
+showSidebarBorder = true
+linkUnderline = false
+paddingTop = "1.25rem"
+paddingBottom = "2rem"
+headingFontSizes = ["2rem", "1.45rem", "1.15rem", "1rem", "0.9rem", "0.8rem"]
+headingFontWeights = [700, 600, 600, 600, 500, 500]
+metricValueFontSize = "2rem"
+metricValueFontWeight = 700
+chartCategoricalColors = ["#1F6FB2", "#2E7D5B", "#E0A526", "#6A4C93", "#C0392B", "#5B6770"]
+dataframeHeaderBackgroundColor = "#12355B"
+dataframeHeaderTextColor = "#FFFFFF"
+dataframeBorderColor = "#D8E2EC"
+
+[theme.sidebar]
+backgroundColor = "#12355B"
+secondaryBackgroundColor = "#1B466F"
+codeBackgroundColor = "#1B466F"
+textColor = "#F7FAFC"
+borderColor = "#2C5C86"
+primaryColor = "#4C9BE8"
+linkColor = "#A9D1F5"
+showWidgetBorder = true
+paddingTop = "1rem"
+paddingBottom = "1.5rem"
